@@ -6,7 +6,7 @@
   
 
   - name: create a deployment
-    command: kubectl create deployment health --image=rishi0803/healthcare-project --port=80
+    command: kubectl create deployment healthcare-project --image=docker.io/rishi0803/healthcare-project --port=80
  
   
 
