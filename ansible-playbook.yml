@@ -6,15 +6,6 @@
   - name: updating apt
     command : sudo apt-get update
 
-  - name : Install Docker
-    command : sudo apt-get install -y docker.io
-    become : yes
-    become_user : root
+  - name: Deploy Docker image to k8s
+    command: kubectl expose deployment health --type=LoadBalancer --port=80 --target-port=80
 
-  - name : Start Docker Service
-    command : sudo systemctl start docker
-    become : yes
-    become_user : root
-
-  - name: Deploy Docker Container
-    command: docker run -itd -p 8084:8082 shubhamkushwah123/medicure:1.0
