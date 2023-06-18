@@ -7,7 +7,7 @@
     command : sudo apt-get update
 
   - name: create a deployment
-    command: kubectl apply -f valaxy-deploy.yml
+    command: kubectl apply -f deployment.yml
  
   
 
