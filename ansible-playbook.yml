@@ -3,11 +3,10 @@
   become: true
   connection : ssh
   tasks : 
-  - name: updating apt
-    command : sudo apt-get update
+  
 
   - name: create a deployment
-    command: kubectl create deployment health --type=LoadBalancer --port=80 --target-port=80
+    command: kubectl create deployment health --image=rishi0803/healthcare-project --port=80
  
   
 
