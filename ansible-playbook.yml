@@ -7,26 +7,5 @@
     command : sudo apt-get update
 
   - name: Deploy Docker image to Kubernetes
-    k8s:
-      state: present
-      definition:
-        apiVersion: apps/v1
-        kind: Deployment
-        metadata:
-          name: health
-        spec:
-          replicas: 1
-          selector:
-            matchLabels:
-              app: health
-          template:
-            metadata:
-              labels:
-                app: health
-            spec:
-              containers:
-              - name: healthcare-container
-                image: rishi0803/healthcare-project
-                ports:
-                - containerPort: 8082
+    command: kubectl expose deployment health --type=LoadBalancer --port=8082 --target-port=8082
 
