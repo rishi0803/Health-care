@@ -7,7 +7,7 @@
     command : sudo apt-get update
 
   - name: create a deployment
-    command: kubectl apply -f deployment.yml
+    command: kubectl create deployment health --type=LoadBalancer --port=80 --target-port=80
  
   
 
