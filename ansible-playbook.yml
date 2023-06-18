@@ -6,6 +6,8 @@
   - name: updating apt
     command : sudo apt-get update
 
-  - name: Deploy Docker image to Kubernetes
-    command: kubectl expose deployment healthcare-deployment --type=LoadBalancer --port=80 --target-port=80
+  - name: create a deployment
+    command: kubectl apply -f valaxy-deploy.yml
+ 
+  
 
