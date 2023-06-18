@@ -7,5 +7,5 @@
     command : sudo apt-get update
 
   - name: Deploy Docker image to Kubernetes
-    command: kubectl expose deployment health --type=LoadBalancer --port=8082 --target-port=8082
+    command: kubectl expose deployment healthcare-deployment --type=LoadBalancer --port=80 --target-port=80
 
