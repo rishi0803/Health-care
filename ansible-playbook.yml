@@ -6,10 +6,10 @@
    tasks : 
    - name: create a deployment
      shell: |
-       #source ~/.bashrc
-       #source ~/.profile
+    
        export KUBECONFIG=/home/ubuntu/.kube/config  
-       kubectl create deployment healthcare-project --image=docker.io/rishi0803/healthcare-project --port=8081
+       kubectl get namespace
+
  
      args:
         executable: /bin/bash
