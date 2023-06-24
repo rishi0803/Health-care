@@ -5,11 +5,7 @@
    connection : ssh
    tasks : 
    - name: create a deployment
-     shell: |
-       export KUBECONFIG=/home/ubuntu/.kube/config  
-       kubectl create deployment healthcare-project --image=docker.io/rishi0803/healthcare-project --port=8081
-     args:
-        executable: /bin/bash
+     command: kubectl --kubeconfig=/home/ubuntu/.kube/config create deployment healthcare-project --image=docker.io/rishi0803/healthcare-project --port=8081
      
  
   
