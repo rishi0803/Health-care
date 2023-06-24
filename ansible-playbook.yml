@@ -7,7 +7,7 @@
    - name: create a deployment
      shell: |
        export KUBECONFIG=/home/ubuntu/.kube/config  
-       kubectl -create deployment healthcare-project --image=docker.io/rishi0803/healthcare-project --port=8081 -target-port=8081 --type=NodePort
+       kubectl -create deployment healthcare-project --image=docker.io/rishi0803/healthcare-project --port=8081 -target-port=8081 --type=LoadBalancer
      args:
         executable: /bin/bash
      
