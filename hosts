@@ -1,5 +1,5 @@
 [webserver]
-3.133.106.118
+13.59.62.238
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
