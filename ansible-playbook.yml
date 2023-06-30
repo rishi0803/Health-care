@@ -6,7 +6,7 @@
    tasks : 
    - name: create a deployment
      command: kubectl --kubeconfig=/home/ubuntu/.kube/config create deployment healthcare-project --image=docker.io/rishi0803/healthcare-project --port=8081
-     
+     command: kubectl --kubeconfig=/home/ubuntu/.kube/config expose deployment/healthcare-project --port=8081 --target-port=8081 --type=NodePort
  
   
 
